@@ -1,3 +1,4 @@
+/////////////////////////////////////////////////
 // function reverseString(str) {
 //   var strSplit = str.split("");
 //   strSplit = strSplit.reverse();
@@ -10,7 +11,6 @@
 // reverseString("Greetings from Earth");
 
 /////////////////////////////////////////////////
-
 // function factorialize(num) {
 // var factorialized = 1;
 //   for(i = 1; i < num+1; i++){
@@ -21,7 +21,6 @@
 // }
 
 /////////////////////////////////////////////////
-
 // function palindrome(str) {
 // 	str = str.replace(/[^a-zA-Z0-9]/g,"");
 //  	var lowercase = str.toLowerCase();
@@ -31,10 +30,36 @@
 //  	var reverse = reversearray.join("");
 //  	console.log(reverse);
 //   if(lowercase === reverse){
-
 //     return true;
 //   }
 //   else{
 //     return false;
 //   }
 // }
+// 
+
+/////////////////////////////////////////////////
+// function findLongestWord(str) {
+//   strArray = str.split(" ");
+//   longestWord = 0;
+//   for(i=0; i < strArray.length; i++){
+//     if(strArray[i].length > longestWord){
+//       longestWord = strArray[i].length;
+//     }
+//   }
+//   return longestWord;
+// }
+// findLongestWord("The quick brown fox jumped over the lazy dog");
+// 
+
+function titleCase(str) {
+	str = str.toLowerCase();
+	strArray = str.split(" ");
+	for(i = 0; i < strArray.length; i++){
+		word = strArray[i];
+		firstLetter = strArray[i].charAt(0).toUpperCase();
+		strArray[i] = firstLetter + word.substr(1);
+	}
+	strCapitalized = strArray.join([separator = ' ']);
+	return strCapitalized
+}
