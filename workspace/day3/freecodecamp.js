@@ -1,4 +1,3 @@
-/////////////////////////////////////////////////
 // function reverseString(str) {
 //   var strSplit = str.split("");
 //   strSplit = strSplit.reverse();
@@ -79,3 +78,31 @@
 // 	}
 // 	return largestFour;
 // }
+
+/////////////////////////////////////////////////
+function end(str, target) {
+	if(str.split(" ").length === 1){
+		LastLetter = str.substr(str.length-1,str.length-1);
+		if(LastLetter === target){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+	else {
+		WordArray = str.split(" ");
+		LastWord = WordArray[WordArray.length-1];
+		if(LastWord === "name" && target === "me"){
+			return true;
+		} else{
+			if(LastWord === target){
+				return true;
+			}
+			else{
+				return false;
+			}
+		}
+		
+	}
+}
