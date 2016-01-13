@@ -52,14 +52,30 @@
 // findLongestWord("The quick brown fox jumped over the lazy dog");
 // 
 
-function titleCase(str) {
-	str = str.toLowerCase();
-	strArray = str.split(" ");
-	for(i = 0; i < strArray.length; i++){
-		word = strArray[i];
-		firstLetter = strArray[i].charAt(0).toUpperCase();
-		strArray[i] = firstLetter + word.substr(1);
-	}
-	strCapitalized = strArray.join([separator = ' ']);
-	return strCapitalized
-}
+/////////////////////////////////////////////////
+// function titleCase(str) {
+// 	str = str.toLowerCase();
+// 	strArray = str.split(" ");
+// 	for(i = 0; i < strArray.length; i++){
+// 		word = strArray[i];
+// 		firstLetter = strArray[i].charAt(0).toUpperCase();
+// 		strArray[i] = firstLetter + word.substr(1);
+// 	}
+// 	strCapitalized = strArray.join([separator = ' ']);
+// 	return strCapitalized
+// }
+
+/////////////////////////////////////////////////
+// function largestOfFour(arr) {							
+// 	var largestFour = [];								
+// 	for (var i = 0; i < arr.length; i++) {				
+// 		var largest = 0;						
+// 		for (var ii = 0; ii < arr[i].length; ii++) {
+// 			if(arr[i][ii] > largest){
+// 				largest = arr[i][ii];
+// 			}
+//          largestFour[i] = largest;
+// 		}
+// 	}
+// 	return largestFour;
+// }
