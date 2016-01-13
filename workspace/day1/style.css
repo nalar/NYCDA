@@ -1,0 +1,20 @@
+div.container {
+	width:75%;
+	margin: auto;
+}
+
+div.header{
+	font-size: 18pt;
+	text-align: center;
+	border-bottom-style: solid;
+}
+
+div.main{
+	text-align: center;
+}
+
+div.footer{
+	font-size: 8pt;
+	font-family: sans-serif;
+	text-align: center;
+}

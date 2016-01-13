@@ -1,0 +1,2 @@
+# Expectations
+I'm hoping to learn how to code efficiently with the help of the teachers and the fellow students. I've got some prior experience programmming in MATLAB for university and playing around a bit with Java (not script) for some games. But I never got to the point where I could build something from scratch, with a full understanding of what I'm doing. This class hopefully helps me get that understanding. When I'm finished I'm hoping to help companies in the earth sciences field to bring their data to the big public.

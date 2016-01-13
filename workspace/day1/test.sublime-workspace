@@ -1,0 +1,287 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Longest",
+				"Longest"
+			],
+			[
+				"leng",
+				"length"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"s",
+				"sans-serif"
+			],
+			[
+				"border-boto",
+				"border-bottom-style"
+			],
+			[
+				"font",
+				"font-size"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 67.0,
+		"last_filter": "docblock",
+		"selected_items":
+		[
+			[
+				"docblock",
+				"DocBlockr: Decorate line comment"
+			],
+			[
+				"docbl",
+				"DocBlockr: Decorate line comment"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"pak",
+				"Package Control: Add Channel"
+			],
+			[
+				"comen",
+				"Toggle Comment"
+			],
+			[
+				"remove pa",
+				"Package Control: Remove Package"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			],
+			[
+				"emmet",
+				"Emmet: Reload Extensions"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"console.log(\"test\")",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/thijstel/Documents/NYCDA/test/fruits.js",
+		"/Users/thijstel/Documents/NYCDA/test/strings2.js",
+		"/Users/thijstel/Documents/NYCDA/test/strings.js",
+		"/Users/thijstel/Documents/NYCDA/node_modules/agario-client/agario-client.js",
+		"/Users/thijstel/Documents/NYCDA/gameserver.ini",
+		"/Users/thijstel/Documents/NYCDA/test/Agar.io_files/main_out.js",
+		"/Users/thijstel/Documents/NYCDA/test/Agar.io_files/client-platform.js",
+		"/Users/thijstel/Documents/NYCDA/test/Agar.io_files/environment.js",
+		"/Users/thijstel/Documents/NYCDA/test/Agar.io_files/agario.js",
+		"/Users/thijstel/Documents/NYCDA/test/Agar.io.html",
+		"/Users/thijstel/Documents/NYCDA/test/Agar.io_files/gpt.js",
+		"/Users/thijstel/Documents/NYCDA/test/Agar.io_files/i18n.js",
+		"/Users/thijstel/Documents/NYCDA/test/Agar.io_files/sdk.js",
+		"/Users/thijstel/Documents/NYCDA/test/Agar.io.webarchive",
+		"/Users/thijstel/Documents/NYCDA/test/stirngs2.js",
+		"/Users/thijstel/Documents/NYCDA/test/forloop.js",
+		"/Users/thijstel/Documents/NYCDA/node_modules/agario-client/servers.js",
+		"/Users/thijstel/Documents/NYCDA/test/test.js",
+		"/Users/thijstel/Documents/NYCDA/test/test.html",
+		"/Users/thijstel/Documents/NYCDA/test/style.css",
+		"/Users/thijstel/Documents/NYCDA/test/90_sin_waves.html",
+		"/Users/thijstel/Documents/NYCDA/test/90_sin_waves_withcomments.js",
+		"/Users/thijstel/Documents/NYCDA/test/workspace.js",
+		"/Users/thijstel/Documents/NYCDA/test/fibonnaci.js",
+		"/Users/thijstel/Documents/NYCDA/test/MasterFamine.java",
+		"/Users/thijstel/Documents/NYCDA/test/primes.js",
+		"/Users/thijstel/Documents/NYCDA/test/masterfamine.java",
+		"/Users/thijstel/Documents/NYCDA/test/90_sin_waves.js",
+		"/Applications/Adobe Photoshop CC 2015/Presets/Zoomify/ZoomifyImageViewer-min.js"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"m.agar",
+			"m.agar.io",
+			"connect",
+			"ws.connect",
+			"connect",
+			"connect(\"ws:",
+			"Lengte",
+			"langste",
+			"function",
+			"class",
+			"\n",
+			"}\n",
+			"for",
+			"while"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"CurrentLength",
+			"Longest"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "test.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"fi",
+				"~/Documents/NYCDA/test/fibonnaci.js"
+			],
+			[
+				"",
+				"~/Documents/NYCDA/test/style.css"
+			],
+			[
+				"style",
+				"~/Documents/NYCDA/test/style.css"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
