@@ -80,29 +80,69 @@
 // }
 
 /////////////////////////////////////////////////
-function end(str, target) {
-	if(str.split(" ").length === 1){
-		LastLetter = str.substr(str.length-1,str.length-1);
-		if(LastLetter === target){
-			return true;
-		}
-		else{
-			return false;
-		}
+// function end(str, target) {
+// 	if(str.split(" ").length === 1){
+// 		LastLetter = str.substr(str.length-1,str.length-1);
+// 		if(LastLetter === target){
+// 			return true;
+// 		}
+// 		else{
+// 			return false;
+// 		}
+// 	}
+// 	else {
+// 		WordArray = str.split(" ");
+// 		LastWord = WordArray[WordArray.length-1];
+// 		if(LastWord === "name" && target === "me"){
+// 			return true;
+// 		} else{
+// 			if(LastWord === target){
+// 				return true;
+// 			}
+// 			else{
+// 				return false;
+// 			}
+// 		}
+
+// 	}
+// }
+// 
+
+/////////////////////////////////////////////////
+// function repeat(str, num) {
+// 	strRepeat = "";
+// 	if(parseInt(str) < 0){
+// 		return("");
+// 	}
+// 	else{
+// 		for (var i = 0; i < num; i++) {
+// 			strRepeat = strRepeat + str;
+// 		}
+// 	}
+// 	return(strRepeat);
+// }
+
+// console.log(repeat("*", 13));
+
+function truncate(str, num) {
+if(str.length == num || num > str.length){
+	num = str.length;
+}
+else if(num < 3){
+	num = num;
+}else{
+	num = num-3;
+}
+
+	if(str.length > num){
+		truncatedStr = str.slice(0,num);
+		finishedStr = truncatedStr + "...";
+		return finishedStr;
 	}
-	else {
-		WordArray = str.split(" ");
-		LastWord = WordArray[WordArray.length-1];
-		if(LastWord === "name" && target === "me"){
-			return true;
-		} else{
-			if(LastWord === target){
-				return true;
-			}
-			else{
-				return false;
-			}
-		}
-		
+	else{
+		return str;
 	}
 }
+	console.log(truncate("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length));
+	console.log(truncate("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length + 2));
+	console.log(truncate("A-tisket a-tasket A green and yellow basket", 11));
