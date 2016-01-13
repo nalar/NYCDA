@@ -1,4 +1,4 @@
-# Welcome
+# Welcome to this repository
 
 ## Homework
 Contains the homework excercises by day
