@@ -80,6 +80,7 @@
 // }
 
 /////////////////////////////////////////////////
+//// This is the -wrong- solution
 // function end(str, target) {
 // 	if(str.split(" ").length === 1){
 // 		LastLetter = str.substr(str.length-1,str.length-1);
@@ -106,7 +107,15 @@
 
 // 	}
 // }
-// 
+
+/////////////////////////////////////////////////
+// function end(str, target) {
+//   if(str.substr((str.length-target.length)) === target){
+//     return true;
+//   }
+//   return false;
+// }
+// end("Bastian", "n");
 
 /////////////////////////////////////////////////
 // function repeat(str, num) {
@@ -124,25 +133,141 @@
 
 // console.log(repeat("*", 13));
 
-function truncate(str, num) {
-if(str.length == num || num > str.length){
-	num = str.length;
-}
-else if(num < 3){
-	num = num;
-}else{
-	num = num-3;
+/////////////////////////////////////////////////
+// function truncate(str, num) {
+// if(str.length == num || num > str.length){
+// 	num = str.length;
+// }
+// else if(num < 3){
+// 	num = num;
+// }else{
+// 	num = num-3;
+// }
+// 
+// 	if(str.length > num){
+// 		truncatedStr = str.slice(0,num);
+// 		finishedStr = truncatedStr + "...";
+// 		return finishedStr;
+// 	}
+// 	else{
+// 		return str;
+// 	}
+// }
+// 	console.log(truncate("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length));
+// 	console.log(truncate("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length + 2));
+// 	console.log(truncate("A-tisket a-tasket A green and yellow basket", 11));
+
+/////////////////////////////////////////////////
+// function chunk(arr, size) {
+//   slicedArr = [];
+//   for(i=0; i<(arr.length/size); i++){
+//     slicedArr.push(arr.slice((size*i), (size*i+size)));
+//   }
+//   return slicedArr;
+// }
+//
+// console.log(chunk(["a", "b", "c", "d"], 2));
+// console.log(chunk([0, 1, 2, 3, 4, 5], 3));
+
+/////////////////////////////////////////////////
+// function slasher(arr, howMany) {
+// 	reverse = arr.reverse();
+// 	splice = arr.splice(0,(arr.length-howMany));
+// 	output = splice.reverse();
+// 	return output;
+// }
+//
+// console.log(slasher([1, 2, 3, 5 , 6], 4));
+
+/////////////////////////////////////////////////
+// function mutation(arr) {
+// 	bool = true;
+// 	lowercase = [];
+// 	lowercase.push(arr[0].toLowerCase());
+// 	lowercase.push(arr[1].toLowerCase());
+// 	console.log(lowercase);
+// 	for (var i = 0; i < lowercase[1].length; i++) {
+// 		if(lowercase[0].indexOf(lowercase[1].charAt(i)) === -1){
+// 			bool = false;
+// 		}
+// 	}
+// 	return bool;
+// }
+//
+// console.log(mutation(["hello", "Hello"]));
+
+/////////////////////////////////////////////////
+// function bouncer(arr) {
+// 	filtered =[];
+// 	function filterFalse(value) {
+// 		if(
+// 			value === false 	|| 
+// 			value === "" 		|| 
+// 			(isNaN(value) 		&&
+// 			 !(typeof value === 'string')) || 
+// 			value === null 		|| 
+// 			value === 0)
+// 		{
+// 			return false;
+// 		}
+// 		return true;
+// 	}
+// 	filtered = arr.filter(filterFalse);
+// 	return filtered;
+// }
+
+// console.log(bouncer([7, "ate", "", false, 9]));
+// console.log(bouncer([false, null, 0, NaN, undefined, ""]));
+
+/////////////////////////////////////////////////
+// function destroyer(args) {
+// 	inputArgs = arguments;
+// 	array = arguments[0];
+
+// 	function filterArgs(value) {
+// 		var filterOut = true;
+// 		for (var i = 1; i < inputArgs.length; i++) {
+// 			if(value === inputArgs[i]){
+// 				filterOut = false;
+// 			}
+// 		}
+// 		return filterOut;		
+// 	}
+// 	return array.filter(filterArgs);
+// }
+//
+// console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3));
+
+/////////////////////////////////////////////////
+// function where(arr, num) {
+// 	sortedArr = arr.sort(function(a, b) {return a - b;});
+// 	position = 0;
+// 	for (var i = 0; i < sortedArr.length; i++) {
+// 		if(num <= sortedArr[i]){
+// 			return(i);
+// 		}
+// 	}
+// 	return(sortedArr.length);
+// }
+
+// console.log(where([3, 3, 5, 20], 5));
+
+/////////////////////////////////////////////////
+function rot13(str) {
+	var pattern = /([^\w])+/g;
+	var deciphered = ""
+	
+	for (var i = 0; i < str.length; i++) {
+		if(pattern.test[str.charAt[i]]) {
+			deciphered = deciphered + str.charAt[i];
+		}
+		else{
+			deciphered = deciphered + String.fromCharCode((str.charCodeAt(i)-13));
+		}
+	} 
+	return deciphered;
 }
 
-	if(str.length > num){
-		truncatedStr = str.slice(0,num);
-		finishedStr = truncatedStr + "...";
-		return finishedStr;
-	}
-	else{
-		return str;
-	}
-}
-	console.log(truncate("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length));
-	console.log(truncate("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length + 2));
-	console.log(truncate("A-tisket a-tasket A green and yellow basket", 11));
+
+// Change the inputs below to test
+console.log(rot13("SERR PBQR PNZC"));

@@ -1,5 +1,5 @@
 ////
-// Example 1
+// Example 1 Constructor Classes
 function Rectangle(width, height) {			// Define function to make a new Rectangle
 	this.width = width;						// Define the width
 	this.height = height;					// Define the height
