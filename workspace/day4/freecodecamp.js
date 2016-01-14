@@ -254,20 +254,23 @@
 
 /////////////////////////////////////////////////
 function rot13(str) {
-	var pattern = /([^\w])+/g;
 	var deciphered = ""
-	
+
 	for (var i = 0; i < str.length; i++) {
-		if(pattern.test[str.charAt[i]]) {
-			deciphered = deciphered + str.charAt[i];
+		if (str.charCodeAt(i) > 64 && str.charCodeAt(i) < 91) {
+			if ((str.charCodeAt(i) - 13) < 65) {
+				deciphered = deciphered + String.fromCharCode(str.charCodeAt(i)+13);
+			} else {
+				deciphered = deciphered + String.fromCharCode((str.charCodeAt(i) - 13));
+			}
+		} else {
+			deciphered = deciphered + str.charAt(i);
 		}
-		else{
-			deciphered = deciphered + String.fromCharCode((str.charCodeAt(i)-13));
-		}
-	} 
+	}
 	return deciphered;
 }
 
 
 // Change the inputs below to test
 console.log(rot13("SERR PBQR PNZC"));
+console.log(rot13("SERR CVMMN!"));
