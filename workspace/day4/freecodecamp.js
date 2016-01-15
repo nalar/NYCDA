@@ -253,24 +253,169 @@
 // console.log(where([3, 3, 5, 20], 5));
 
 /////////////////////////////////////////////////
-function rot13(str) {
-	var deciphered = ""
+// function rot13(str) {
+// 	var deciphered = ""
 
-	for (var i = 0; i < str.length; i++) {
-		if (str.charCodeAt(i) > 64 && str.charCodeAt(i) < 91) {
-			if ((str.charCodeAt(i) - 13) < 65) {
-				deciphered = deciphered + String.fromCharCode(str.charCodeAt(i)+13);
-			} else {
-				deciphered = deciphered + String.fromCharCode((str.charCodeAt(i) - 13));
-			}
-		} else {
-			deciphered = deciphered + str.charAt(i);
-		}
-	}
-	return deciphered;
+// 	for (var i = 0; i < str.length; i++) {
+// 		if (str.charCodeAt(i) > 64 && str.charCodeAt(i) < 91) {
+// 			if ((str.charCodeAt(i) - 13) < 65) {
+// 				deciphered = deciphered + String.fromCharCode(str.charCodeAt(i)+13);
+// 			} else {
+// 				deciphered = deciphered + String.fromCharCode((str.charCodeAt(i) - 13));
+// 			}
+// 		} else {
+// 			deciphered = deciphered + str.charAt(i);
+// 		}
+// 	}
+// 	return deciphered;
+// }
+
+
+// // Change the inputs below to test
+// console.log(rot13("SERR PBQR PNZC"));
+// console.log(rot13("SERR CVMMN!"));
+
+/////////////////////////////////////////////////
+// // Example
+// var ourArray = ["Stimpson", "J", "cat"];
+// ourArray.shift(); // ourArray now equals ["J", "cat"]
+// ourArray.unshift("Happy"); 
+// // ourArray now equals ["Happy", "J", "cat"]
+
+// // Setup
+// var myArray = [["John", 23], ["dog", 3]];
+// myArray.shift();
+
+// // Only change code below this line.
+// console.log(myArray);
+// myArray.unshift(["Paul", 35]);
+// console.log(myArray);
+
+//////////////////////////////////////////////////
+// Setup
+// var myPlants = [
+//   { 
+//     type: "flowers",
+//     list: [
+//       "rose",
+//       "tulip",
+//       "dandelion"
+//     ]
+//   },
+//   {
+//     type: "trees",
+//     list: [
+//       "fir",
+//       "pine",
+//       "birch"
+//     ]
+//   }  
+// ];
+// // Only change code below this line
+// console.log(myPlants[1].list[1]);
+// //var secondTree = myPlants.trees; // Change this line
+
+///////////////////////////////////////
+// Setup
+// var collection = {
+//     2548: {
+//       album: "Slippery When Wet",
+//       artist: "Bon Jovi",
+//       tracks: [ 
+//         "Let It Rock", 
+//         "You Give Love a Bad Name" 
+//       ]
+//     },
+//     2468: {
+//       album: "1999",
+//       artist: "Prince",
+//       tracks: [ 
+//         "1999", 
+//         "Little Red Corvette" 
+//       ]
+//     },
+//     1245: {
+//       artist: "Robert Palmer",
+//       tracks: [ ]
+//     },
+//     5439: {
+//       album: "ABBA Gold"
+//     }
+// };
+// // Keep a copy of the collection for tests
+// var collectionCopy = JSON.parse(JSON.stringify(collection));
+// // Only change code below this line
+// function update(id, prop, value) {
+//   if(collection[id].value !== "" && prop !== "tracks"){
+//        collection[id][prop] = value;
+//      }else if(collection[id].value !== "" && prop === "tracks"){
+//        collection[id].tracks.push(value);
+//      }else if(value == ""){
+//       delete collection[id][prop];
+//      }
+//   return collection;
+// }
+// // Alter values below to test your code
+// update(2548, "artist", "");
+// console.log(collection);;
+
+///////////////////////////////////////
+// function multiplyAll(arr) {
+//   var product = 1;
+//   // Only change code below this line
+//   for(var i=0; i<arr.length; i++){
+//     for(var j=0; j<arr[i].length; j++){
+//       product *= arr[i][j];
+//     }
+//   }
+//   // Only change code above this line
+//   return product;
+// }
+// // Modify values below to test your code
+// console.log(multiplyAll([[1,2],[3,4],[5,6,7]]));
+
+//Setup
+var contacts = [{
+    "firstName": "Akira",
+    "lastName": "Laine",
+    "number": "0543236543",
+    "likes": ["Pizza", "Coding", "Brownie Points"]
+}, {
+    "firstName": "Harry",
+    "lastName": "Potter",
+    "number": "0994372684",
+    "likes": ["Hogwarts", "Magic", "Hagrid"]
+}, {
+    "firstName": "Sherlock",
+    "lastName": "Holmes",
+    "number": "0487345643",
+    "likes": ["Intriguing Cases", "Violin"]
+}, {
+    "firstName": "Kristian",
+    "lastName": "Vos",
+    "number": "unknown",
+    "likes": ["Javascript", "Gaming", "Foxes"]
+}, ];
+
+
+function lookUp(firstName, prop) {
+    // Only change code below this line
+    for (var person in contacts) {
+        if (firstName === contacts[person].firstName && contacts[person][prop] != undefined) {
+            return (contacts[person][prop]);
+        }
+    }
+    for (var person in contacts) {
+     if (firstName !== contacts[person].firstName) {
+            return "No such contact";
+        }   
+   for (var person in contacts) {
+     if (contacts[person][prop] === undefined) {
+            return "No such property";
+    }            
+    // Only change code above this line
 }
 
-
-// Change the inputs below to test
-console.log(rot13("SERR PBQR PNZC"));
-console.log(rot13("SERR CVMMN!"));
+// Change these values to test your function
+console.log(lookUp("Akira", "likes"));
+lookUp("Harry", "likes");

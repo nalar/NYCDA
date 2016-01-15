@@ -1,0 +1,13 @@
+npm ls                     # list all locally installed modules
+npm ls -g                  # list all globally installed modules
+npm ls -g --depth 0        # list all globally installed modules (top level only)
+
+npm install                # install all the node modules listed in your package.json file
+npm install express        # install the express module into your local directory
+npm install express --save # install the express module into your local directory and update your package.json file to show it as a dependency
+
+npm uninstall express      # remove the express module
+
+npm install pm2 -g         # install the pm2 module globally
+
+npm init                   # interactive tool to create a package.json file

@@ -1,77 +1,15 @@
-////// Constructors always start capitallized
-
-// ////
-// // Example from codepad 1
-// function Point(x, y) {
-//     this.x = x;
-//     this.y = y;
-//     this.distanceFrom = function(point) {
-//         var xSquared = (this.x - point.x) * (this.x - point.x);
-//         var ySquared = (this.y - point.y) * (this.y - point.y);
-//         return Math.sqrt(xSquared + ySquared);
-//     }
-// }
-
-// // Point.prototype.distanceFrom = function(point) {
-// //     var xSquared = (this.x - point.x) * (this.x - point.x);
-// //     var ySquared = (this.y - point.y) * (this.y - point.y);
-// //     return Math.sqrt(xSquared + ySquared);
-// // }
-
-
-
-// var aPoint = new Point(4,5);
-// var bPoint = new Point(1,1);
-
-
-// var distance = aPoint.distanceFrom(bPoint);
-
-
-// console.log(distance);
-
-
-// var number = 10;
-// console.log(Number.prototype);
-
-// ////
-// // Example from codepad 2
-// function User(email, password) {
-//     this.email = email;
-//     this.password = password;
-// }
-
-// User.prototype.findInDatabase = function() {
-//     console.log("email is: " + this.email);
-//     var user = {
-//         email: "jon@miller",
-//         password: "yay_a_password"
-//     }
-    
-//     if(user.password === this.password) {
-//         console.log('user found');
-//     } else {
-//         console.log('user not found');
-//     }
-// }
-
-// var myFirstUser = new User("jon@miller", "yay_a_password");
-// var mySecondUser = new User("lloyd@chambrier", "some_other_password");
-
-// myFirstUser.findInDatabase();
-// mySecondUser.findInDatabase();
-
 // ////
 // // Example 1
-// "hello".length; 								// Returns 5
-// "hello".length2; 								// Returns undefined
+"hello".length; 								// Returns 5
+"hello".length2; 								// Returns undefined
 
-// String.prototype.length2 = 1000;				// Define the length2 value of Strings to 1000
-// "hello".length2; 								// Retuns 1000
+String.prototype.length2 = 1000;				// Define the length2 value of Strings to 1000
+"hello".length2; 								// Retuns 1000
 
-// String.prototype.twiceLength = function() {		// Define the twiceLength value of Strings to be a function
-//     return this.length * 2;						// return the length of the string times two as the result
-// }
-// "hello".twiceLength(); 							// Returns 10			
+String.prototype.twiceLength = function() {		// Define the twiceLength value of Strings to be a function
+    return this.length * 2;						// return the length of the string times two as the result
+}
+"hello".twiceLength(); 							// Returns 10			
 
 // ////
 // // Example 2
@@ -133,3 +71,63 @@ Rectangle.prototype.containsPoint = function(point){	// Define the containsPoint
 
 console.log(RectangleA.containsPoint(cPoint));	// Test run the containsPoint() function
 console.log(RectangleA.containsPoint(dPoint));	// Test run the containsPoint() function
+
+////// Constructors always start capitallized
+
+// ////
+// // Example from codepad 1
+function Point(x, y) {
+    this.x = x;
+    this.y = y;
+    this.distanceFrom = function(point) {
+        var xSquared = (this.x - point.x) * (this.x - point.x);
+        var ySquared = (this.y - point.y) * (this.y - point.y);
+        return Math.sqrt(xSquared + ySquared);
+    }
+}
+
+// Point.prototype.distanceFrom = function(point) {
+//     var xSquared = (this.x - point.x) * (this.x - point.x);
+//     var ySquared = (this.y - point.y) * (this.y - point.y);
+//     return Math.sqrt(xSquared + ySquared);
+// }
+
+var aPoint = new Point(4,5);
+var bPoint = new Point(1,1);
+
+
+var distance = aPoint.distanceFrom(bPoint);
+
+
+console.log(distance);
+
+
+var number = 10;
+console.log(Number.prototype);
+
+// ////
+// // Example from codepad 2
+function User(email, password) {
+    this.email = email;
+    this.password = password;
+}
+
+User.prototype.findInDatabase = function() {
+    console.log("email is: " + this.email);
+    var user = {
+        email: "jon@miller",
+        password: "yay_a_password"
+    }
+    
+    if(user.password === this.password) {
+        console.log('user found');
+    } else {
+        console.log('user not found');
+    }
+}
+
+var myFirstUser = new User("jon@miller", "yay_a_password");
+var mySecondUser = new User("lloyd@chambrier", "some_other_password");
+
+myFirstUser.findInDatabase();
+mySecondUser.findInDatabase();
