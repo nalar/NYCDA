@@ -397,25 +397,63 @@ var contacts = [{
     "likes": ["Javascript", "Gaming", "Foxes"]
 }, ];
 
+////////////////////////////////////////////////
+// function lookUp(firstName, prop) {
+//     // Only change code below this line
+//     for (var person in contacts) {
+//         if (firstName === contacts[person].firstName && contacts[person][prop] != undefined) {
+//             return (contacts[person][prop]);
+//         }
+//     }
+//     for (var person in contacts) {
+//      if (firstName !== contacts[person].firstName) {
+//             return "No such contact";
+//         }   
+//    for (var person in contacts) {
+//      if (contacts[person][prop] === undefined) {
+//             return "No such property";
+//     }            
+//     // Only change code above this line
+// }
+// // Change these values to test your function
+// console.log(lookUp("Akira", "likes"));
+// lookUp("Harry", "likes");
 
-function lookUp(firstName, prop) {
-    // Only change code below this line
-    for (var person in contacts) {
-        if (firstName === contacts[person].firstName && contacts[person][prop] != undefined) {
-            return (contacts[person][prop]);
-        }
-    }
-    for (var person in contacts) {
-     if (firstName !== contacts[person].firstName) {
-            return "No such contact";
-        }   
-   for (var person in contacts) {
-     if (contacts[person][prop] === undefined) {
-            return "No such property";
-    }            
-    // Only change code above this line
+//////////////////////////////////
+// function sumAll(arr) {
+//   totalSum=0;
+//   if(arr[0] < arr[1]){
+//     minNum = arr[0];
+//     maxNum = arr[1];
+//   } else{
+//     maxNum = arr[0];
+//     minNum = arr[1];
+//   }
+//   console.log(minNum);
+//   console.log(maxNum);
+//   for(i=minNum; i<=maxNum; i++)
+//   {
+//     totalSum = totalSum+i;
+//   }
+//   return totalSum;
+// }
+// console.log(sumAll([1, 4]));
+
+function diff(arr1, arr2) {
+  var newArr = [];
+  var combArr = [];
+
+  combArr = arr1.concat(arr2);
+  combArr = combArr.sort();
+
+for(i=0; i<combArr.length; i++){
+  if(combArr[i+1] === combArr[i]){
+    
+  }
+}
+  combArr = newArr;
+  return newArr;
 }
 
-// Change these values to test your function
-console.log(lookUp("Akira", "likes"));
-lookUp("Harry", "likes");
+console.log(diff([1, 2, 3, 5], [1, 2, 3, 4, 5]));
+ 
