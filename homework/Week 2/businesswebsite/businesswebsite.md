@@ -1,4 +1,7 @@
-Business Website
+# Located at
+http://github.com/nalar/businesswebsite
+
+# Business Website Group Project
 
 Work in groups of two or three. Note: each person will receive a separate grade based on their contributions on Github.
 Choose a business, then build a website for that business. The business can be real or imagined.
