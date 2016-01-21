@@ -17,15 +17,12 @@ var fs = require('fs');
 
 function readAndParse(targetJSON, callback){
 		fs.readFile(targetJSON, 'utf8', function(err, data) {
-
 			if(err){
 				throw err;
 			};
-
 			var importedJSON = JSON.parse(data);
 			callback(importedJSON);
 		});
-
 };
 
 module.exports = {
