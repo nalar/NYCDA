@@ -20,35 +20,35 @@
 
 /////
 // Bonus
-var express = require('express');
-var bodyParser = require('body-parser');
-var app = express();
-app.use(bodyParser.urlencoded({ extended: true }));
+var express = require('express');						// Require express
+var bodyParser = require('body-parser');				// Require bodyParse
+var app = express();									// define app is express
+app.use(bodyParser.urlencoded({ extended: true }));		// tell app (express) to use bodypasrser
 
-function makeResponse(request, response, callback){
-	var responseText = "";
-	if(request.method === "GET"){
-		requestData = request.query;
+function makeResponse(request, response, callback){		// Function that prepares the response
+	var responseText = "";								// Set the response text to empty
+	if(request.method === "GET"){						// If the request method is GET
+		requestData = request.query;					// Data can be found in request.query
 	};
-	if(request.method === "POST"){
-		requestData = request.body;
+	if(request.method === "POST"){						// If the request method is POST
+		requestData = request.body;						// Data can be found in request.body
 	}
 
-	for(messages in requestData){
-		responseText += requestData[messages] + " ";
+	for(messages in requestData){						// For parameter in the query
+		responseText += requestData[messages] + " ";	// Add the value to the response tekst
 	}
-	response.send(responseText + "\n");
+	response.send(responseText + "\n");					// Send the response with a new line break
 };
 
-app.get('/', function (request, response) {
+app.get('/', function (request, response) {				// On a get request for /
+	makeResponse(request, response);					// Call makeResponse with request and response
+});
+
+app.get('/messages', function (request, response) {		// On a get request for /messages
 	makeResponse(request, response);
 });
 
-app.get('/messages', function (request, response) {
-	makeResponse(request, response);
-});
-
-app.post('/messages', function (request, response) {
+app.post('/messages', function (request, response) {	// On a post request for /messages
 	makeResponse(request, response);
 });
 

@@ -13,18 +13,18 @@
 // 	jsObject: readJSON,
 // };
 
-var fs = require('fs');
+var fs = require('fs');											// Require the filesystem i/o
 
-function readAndParse(targetJSON, callback){
-		fs.readFile(targetJSON, 'utf8', function(err, data) {
-			if(err){
-				throw err;
+function readAndParse(targetJSON, onComplete){					// define function readAndParse with arguments target and callback
+		fs.readFile(targetJSON, 'utf8', function(err, data) {	// call the fs.readfile function with utf8 encoding and anonymous function as call back
+			if(err){											// If theres an error
+				throw err;										// throw it
 			};
-			var importedJSON = JSON.parse(data);
-			callback(importedJSON);
+			var importedJSON = JSON.parse(data);				// parse the JSON data and save as importedJSON var
+			onComplete(importedJSON);							// pass on the importedJSON var to the callback function
 		});
 };
 
-module.exports = {
-	readAndParse: readAndParse,
+module.exports = {												// define the module exports
+	readAndParse: readAndParse,									// readAndParse can be called by jsonfilereader.readAndParse
 };

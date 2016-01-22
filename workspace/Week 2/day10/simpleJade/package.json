@@ -1,0 +1,9 @@
+{
+  "name": "simple_jade_server",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "express": "^4.13.4",
+    "jade": "^1.11.0"
+  }
+}

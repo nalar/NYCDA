@@ -1,0 +1,5 @@
+html
+	head
+	body
+		each color in colorData.colorsArray
+			li(id=color.colorName style="color:"+color.hexValue+";")= "Color name: " + color.colorName +" has hex " + color.hexValue
