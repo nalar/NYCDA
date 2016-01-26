@@ -1,5 +1,5 @@
 /////
-// Exercise 4
+// Exercise 2
 // Using Promise wrap the following postgreSQL query
 // "select * from tablaname"
 // 
@@ -8,10 +8,6 @@
 // 
 // Return the error to the reject function if an error
 // occurs while querying the database.
-// 
-// Now make a function that takes in one parameter, the
-// table name and that creates a promise which contains
-// that table name in the query
 
 var Promise = require('promise');
 var pg = require('pg');
@@ -19,7 +15,7 @@ var pg = require('pg');
 var connectionString = 'postgres://postgres:sergtsop@localhost:5432/postgres';
 var targetTable = 'users';
 
-function makeQueryPromise(targetTable) {
+function makeQueryPromise(connectionString, targetTable) {
 
 	queryPromise = new Promise(function(resolve, reject) {
 		pg.connect(connectionString, function(err, client, done) {
@@ -47,5 +43,19 @@ function makeQueryPromise(targetTable) {
 	return (queryPromise);
 };
 
-getTargetTable = makeQueryPromise(targetTable);
+
+var Table = function(tableName) {
+	this.tableName = tableName;
+}
+
+Table.prototype.getAll = function() {
+
+}
+
+var users = new Table('users');
+users.getAll();
+
+
+
+getTargetTable = makeQueryPromise(connectionString, targetTable);
 getTargetTable.then(console.log, console.log);
