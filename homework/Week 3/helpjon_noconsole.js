@@ -54,8 +54,8 @@ function helpJon(seatArray) {
 
 		}
 	}
-	//console.log(seatArray);
-	//console.log(seatScore);
+	console.log(seatArray);
+	console.log(seatScore);
 
 	return ('Best seat to sit: ' + (bestSeat + 1));
 }
